@@ -1,0 +1,19 @@
+div.student-details{
+  display:block;
+  border:1px solid black;
+  margin:2%;
+}
+div.student-details > div{
+  padding:2%;
+}
+
+div.student-details-header,
+div.student-details-email,
+div.student-details-mobile,
+div.student-details-footer{
+  text-align: center;
+}
+div.student-details-info{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,25 @@
+<section>
+  <div>
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="student.name" name="name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="student.email" name="email">
+      </div>
+      <div>
+        <label for="mobile">Mobile</label>
+        <input type="text" [(ngModel)]="student.mobile" name="mobile">
+      </div>
+      <div>
+        <label for="percentage">Percentage</label>
+        <input type="number" [(ngModel)]="student.percentage" name="percentage">
+      </div>
+      <div>
+        <input type="submit" value="Add Student">
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+
+<app-add-student (addStudent)= "onAddStudent($event)" ></app-add-student>
+<section>
+  <div class='student-list'>
+   <app-student-details *ngFor="let std of students" [student]="std"></app-student-details>
+  </div>
+</section>

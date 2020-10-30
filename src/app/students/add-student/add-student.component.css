@@ -1,0 +1,23 @@
+section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:2%;
+}
+
+section > div {
+  width: 40%;
+}
+
+section > div> form> div{
+  display: flex;
+  justify-content: space-around;
+  padding:1%;
+}
+section > div > form > div > label{
+  flex:1;
+}
+
+section > div > form > div > input{
+  flex:3;
+}
