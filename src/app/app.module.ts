@@ -10,6 +10,8 @@ import { TrainersComponent } from './trainers/trainers.component';
 import { AddTrainerComponent } from './trainers/add-trainer/add-trainer.component';
 import { StudentDetailsComponent } from './students/student-details/student-details.component';
 import { StudentService } from './services/student.service';
+import { EditStudentComponent } from './students/edit-student/edit-student.component';
+import { StudentsListComponent } from './students/students-list/students-list.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { StudentService } from './services/student.service';
     AddStudentComponent,
     TrainersComponent,
     AddTrainerComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    EditStudentComponent,
+    StudentsListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,30 @@
-section{
-  width: 100%;
+section.outer> header {
+  display:flex;
+  justify-content: center;
+  width: 65%;
+  margin-top: 5%;
+}
+
+section.outer> header > nav{
+  flex:1;
   display: flex;
   justify-content: center;
 }
-div.student-list{
-  width: 30%;
+
+section.outer > header > nav > ul{
+  flex:1;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
 }
+
+section.outer > header > nav > ul > li {
+  flex-basis: 20%;
+  background-color: coral;
+  padding:2%;
+  border-radius: 5%;
+  text-align: center;
+}
+
+
+

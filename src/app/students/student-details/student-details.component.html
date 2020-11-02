@@ -7,8 +7,11 @@
     <div class='student-details-mobile'>
       {{student.mobile}}
     </div>
+    <div class='student-details-percentage'>
+      {{student.percentage}}%
+    </div>
   </div>
   <div class='student-details-footer'>
-    {{student.percentage}}%
+    <button (click)="edit(student.email)">Edit</button>
   </div>
 </div>

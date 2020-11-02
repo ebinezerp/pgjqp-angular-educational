@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentService } from 'src/app/services/student.service';
 import { Student } from '../student.model';
 
@@ -9,23 +10,21 @@ import { Student } from '../student.model';
 })
 export class AddStudentComponent implements OnInit {
 
-  @Input() student: Student;
-  @Input() edit: boolean;
+  student: Student;
 
-  constructor(private studentService: StudentService) {
+  constructor(
+    private studentService: StudentService,
+    private router: Router) {
+    this.student = new Student();
   }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    if (this.edit){
-      this.studentService.update(this.student);
-    }else{
-      this.studentService.addStudent(this.student);
-    }
-
+    this.studentService.addStudent(this.student);
     this.student = new Student();
+    this.router.navigate(['/students']);
   }
 
 }

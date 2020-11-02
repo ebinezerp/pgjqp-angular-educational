@@ -1,8 +1,12 @@
+<section class="outer">
+  <header>
+    <nav>
+      <ul>
+        <li routerLink="/students">Students List</li>
+        <li routerLink="/students/add">Add Student</li>
+      </ul>
+    </nav>
+  </header>
 
-<app-add-student [edit]="isEditTriggerd" [student]="selectedStudent"></app-add-student>
-
-<section>
-  <div class='student-list'>
-   <app-student-details *ngFor="let std of students" [student]="std" (click)="edit(std)"></app-student-details>
-  </div>
+  <router-outlet></router-outlet>
 </section>

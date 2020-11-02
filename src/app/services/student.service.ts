@@ -25,4 +25,8 @@ export class StudentService {
     this.students[index] = student;
   }
 
+  getStudent(email: string): Student {
+    return this.students.find(std => std.email === email);
+  }
+
 }

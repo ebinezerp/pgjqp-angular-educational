@@ -1,0 +1,8 @@
+section.inner{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+div.student-list{
+  width: 30%;
+}
