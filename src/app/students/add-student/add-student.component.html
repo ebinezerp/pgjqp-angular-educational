@@ -7,7 +7,7 @@
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="text" [(ngModel)]="student.email" name="email">
+        <input [readOnly]="edit" type="text" [(ngModel)]="student.email" name="email">
       </div>
       <div>
         <label for="mobile">Mobile</label>
@@ -18,7 +18,8 @@
         <input type="number" [(ngModel)]="student.percentage" name="percentage">
       </div>
       <div>
-        <input type="submit" value="Add Student">
+        <input *ngIf="!edit" type="submit" value="Add Student">
+        <input *ngIf="edit" type="submit" value="Update Student">
       </div>
     </form>
   </div>

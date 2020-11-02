@@ -9,6 +9,7 @@ import { AddStudentComponent } from './students/add-student/add-student.componen
 import { TrainersComponent } from './trainers/trainers.component';
 import { AddTrainerComponent } from './trainers/add-trainer/add-trainer.component';
 import { StudentDetailsComponent } from './students/student-details/student-details.component';
+import { StudentService } from './services/student.service';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { StudentDetailsComponent } from './students/student-details/student-deta
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    StudentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

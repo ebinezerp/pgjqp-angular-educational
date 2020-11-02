@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { StudentService } from 'src/app/services/student.service';
 import { Student } from '../student.model';
 
 @Component({
@@ -8,18 +9,22 @@ import { Student } from '../student.model';
 })
 export class AddStudentComponent implements OnInit {
 
-  student: Student;
-  @Output() addStudent: EventEmitter<Student> = new EventEmitter<Student>();
+  @Input() student: Student;
+  @Input() edit: boolean;
 
-  constructor() {
-    this.student = new Student();
+  constructor(private studentService: StudentService) {
   }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    this.addStudent.emit(this.student);
+    if (this.edit){
+      this.studentService.update(this.student);
+    }else{
+      this.studentService.addStudent(this.student);
+    }
+
     this.student = new Student();
   }
 

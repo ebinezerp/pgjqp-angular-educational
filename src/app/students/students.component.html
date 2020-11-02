@@ -1,7 +1,8 @@
 
-<app-add-student (addStudent)= "onAddStudent($event)" ></app-add-student>
+<app-add-student [edit]="isEditTriggerd" [student]="selectedStudent"></app-add-student>
+
 <section>
   <div class='student-list'>
-   <app-student-details *ngFor="let std of students" [student]="std"></app-student-details>
+   <app-student-details *ngFor="let std of students" [student]="std" (click)="edit(std)"></app-student-details>
   </div>
 </section>

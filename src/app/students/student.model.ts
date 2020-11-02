@@ -14,4 +14,13 @@ export class Student {
 
   constructor(public name?: string, public email?: string, public mobile?: string, public percentage?: number) {}
 
+  clone(): Student {
+   const copy: Student = new Student();
+   copy.name = this.name;
+   copy.email = this.email;
+   copy.mobile = this.mobile;
+   copy.percentage = this.percentage;
+   return copy;
+  }
+
 }
